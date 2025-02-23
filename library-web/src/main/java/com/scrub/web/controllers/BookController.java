@@ -42,6 +42,7 @@ public class BookController {
         return ResponseEntity.ok(searchedBookDto);
     }
 
+    @Transactional(readOnly = true)
     @GetMapping(path = "", produces = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<BookDTO>> getAllBooks() {
         List<BookEntity> bookEntities = bookService.getAllBooks();
