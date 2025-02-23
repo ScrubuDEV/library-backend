@@ -2,8 +2,9 @@ package com.scrub.library.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
-import lombok.*;
-
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
@@ -32,8 +33,4 @@ public class BookEntity {
 
     @Column(name = "DESCRIPTION")
     private String description;
-
-    public Long getId() {
-        return id;
-    }
 }
